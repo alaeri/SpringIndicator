@@ -65,10 +65,10 @@ uploadArchives {
     repositories.mavenDeployer {
         beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
-        repository(url: sonatypeRepoS) {
+        /*repository(url: sonatypeRepoS) {
             authentication(userName: sonatypeUsername,
                     password: sonatypePassword)
-        }
+        }*/
 
         pom.groupId = project.ext.groupId
         pom.artifactId = project.ext.artifactId
