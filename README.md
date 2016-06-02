@@ -3,9 +3,9 @@
 
 An indicator like Morning Routine guide.It was originally based on [BezierDemo](https://github.com/chenupt/BezierDemo).
 
-The sample app: [click me](https://github.com/chenupt/SpringIndicator/raw/master/img/springindicator_1.0.1.apk)
+The sample app: [click me](http://riontech.com/SpringIndicator/sample-debug.apk)
 
-![gif](https://raw.githubusercontent.com/chenupt/SpringIndicator/master/img/si_1.0.0.gif)
+![gif](http://riontech.com/SpringIndicator/demo.gif)
 
 #Usage
 ---
@@ -19,21 +19,27 @@ Add the indicator to your layout.
 
 ```
 <github.chenupt.springindicator.SpringIndicator
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:siTextSize="18sp"
-    app:siIndicatorColors="@array/indicator_colors"
-    app:siTextColor="@color/colorPrimaryDark"
-    app:siSelectedTextColor="@android:color/white"
-    app:siIndicatorColor="@color/colorPrimary"
-    android:id="@+id/indicator"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"/>
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:defaultMargin="30dp"
+            app:endMargin="40dp"
+            app:siIndicatorColor="@color/colorPrimary"
+            app:siIndicatorColors="@array/indicator_colors"
+            app:siSelectedTextColor="@android:color/white"
+            app:siTextColor="@color/colorPrimaryDark"
+            app:siTextSize="18sp"
+            app:startMargin="40dp" />
 ```
 Setup with your viewPager.
 ```
 springIndicator.setViewPager(viewPager);
 ```
 [All xml attributes.](https://github.com/chenupt/SpringIndicator/blob/master/lib%2Fsrc%2Fmain%2Fres%2Fvalues%2Fattrs.xml)
+
+Updated By
+---
+ * Keyur - <keyuraashra@gmail.com>
 
 Developed By
 ---
