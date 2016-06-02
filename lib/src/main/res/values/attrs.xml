@@ -26,5 +26,12 @@
         <!--min indicator radius when moving-->
         <attr name="siRadiusMin" format="dimension"/>
 
+        <!-- margin from start and end -->
+        <attr name="startMargin" format="dimension" />
+        <attr name="endMargin" format="dimension" />
+
+        <!-- margin between 2 consecutive items-->
+        <attr name="defaultMargin" format="dimension" />
+
     </declare-styleable>
 </resources>
