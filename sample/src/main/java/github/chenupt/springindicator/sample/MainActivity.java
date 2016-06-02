@@ -42,12 +42,14 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    private List<String> getTitles(){
-        return Lists.newArrayList("1", "2", "3", "4");
+    private List<String> getTitles() {
+        return Lists.newArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
     }
 
-    private List<Integer> getBgRes(){
-        return Lists.newArrayList(R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4);
+    private List<Integer> getBgRes() {
+        return Lists.newArrayList(R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4,
+                R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4,
+                R.drawable.bg1, R.drawable.bg2);
     }
 
 
