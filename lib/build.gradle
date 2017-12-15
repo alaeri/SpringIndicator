@@ -19,8 +19,8 @@ dependencies {
 
 // -----
 
-apply plugin: 'signing'
-apply plugin: 'maven'
+//apply plugin: 'signing'
+//apply plugin: 'maven'
 
 ext {
     groupId = 'com.github.chenupt.android'
