@@ -14,13 +14,14 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
 }
 
 
 // -----
 
-//apply plugin: 'signing'
-//apply plugin: 'maven'
+apply plugin: 'signing'
+apply plugin: 'maven'
 
 ext {
     groupId = 'com.github.chenupt.android'
