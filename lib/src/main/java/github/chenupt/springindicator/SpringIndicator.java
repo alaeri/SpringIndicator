@@ -21,6 +21,7 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -147,22 +148,15 @@ public class SpringIndicator extends HorizontalScrollView {
     }
 
     private void addTabItems() {
+        int size = (int) (2 * radiusMax);
 
-        LinearLayout.LayoutParams layoutParamsLeft =
-                new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.MATCH_PARENT, 1.0f);
+        LinearLayout.LayoutParams layoutParams =
+                new LinearLayout.LayoutParams(size, size);
 
-        LinearLayout.LayoutParams layoutParamsRight =
-                new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                        ViewGroup.LayoutParams.MATCH_PARENT, 1.0f);
-
-        layoutParamsRight.setMargins(((int) defaultMargin), ((int) defaultMargin),
-                ((int) endMargin), ((int) defaultMargin));
-
-        layoutParamsLeft.setMargins(((int) startMargin), ((int) defaultMargin),
+        layoutParams.setMargins(((int) defaultMargin), ((int) defaultMargin),
                 ((int) defaultMargin), ((int) defaultMargin));
 
-        tabContainer.setPadding(((int) startMargin), 0, 0, 0);
+        tabContainer.setPadding(((int) startMargin), 0, (int) endMargin, 0);
 
         tabs = new ArrayList<>();
         for (int i = 0; i < viewPager.getAdapter().getCount(); i++) {
@@ -172,6 +166,9 @@ public class SpringIndicator extends HorizontalScrollView {
             }
             textView.setGravity(Gravity.CENTER);
             textView.setTextColor(getResources().getColor(textColorId));
+            textView.setLines(1);
+            textView.setSingleLine();
+            textView.setEllipsize(TextUtils.TruncateAt.END);
             if (textBgResId != 0) {
                 textView.setBackgroundResource(textBgResId);
             }
@@ -186,14 +183,7 @@ public class SpringIndicator extends HorizontalScrollView {
                 }
             });
 
-//            TO DO SET MARGINS
-            if (i == viewPager.getAdapter().getCount() - 1) {
-                textView.setLayoutParams(layoutParamsRight);
-            } else if (i == 0) {
-                textView.setLayoutParams(layoutParamsLeft);
-            } else {
-                textView.setLayoutParams(layoutParamsLeft);
-            }
+            textView.setLayoutParams(layoutParams);
             tabs.add(textView);
             tabContainer.addView(textView);
         }

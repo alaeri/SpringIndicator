@@ -2,7 +2,7 @@ package github.chenupt.springindicator.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,7 +17,7 @@ import github.chenupt.springindicator.SpringIndicator;
 import github.chenupt.springindicator.viewpager.ScrollerViewPager;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     ScrollerViewPager viewPager;
 
@@ -26,9 +26,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager = (ScrollerViewPager) findViewById(R.id.view_pager);
-        SpringIndicator springIndicator = (SpringIndicator) findViewById(R.id.indicator);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        viewPager = findViewById(R.id.view_pager);
+        SpringIndicator springIndicator = findViewById(R.id.indicator);
+        Toolbar toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
         PagerModelManager manager = new PagerModelManager();
@@ -43,11 +43,13 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private List<String> getTitles() {
-        return Lists.newArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+        return Lists.newArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20");
     }
 
     private List<Integer> getBgRes() {
         return Lists.newArrayList(R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4,
+                R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4,
+                R.drawable.bg1, R.drawable.bg2,R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4,
                 R.drawable.bg1, R.drawable.bg2, R.drawable.bg3, R.drawable.bg4,
                 R.drawable.bg1, R.drawable.bg2);
     }
