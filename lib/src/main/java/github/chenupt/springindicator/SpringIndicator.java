@@ -67,8 +67,9 @@ public class SpringIndicator extends HorizontalScrollView {
     private TabClickListener tabClickListener;
     private ObjectAnimator indicatorColorAnim;
 
-    private int titleOffset;
+
     private static final int TITLE_OFFSET_AUTO_CENTER = -1;
+    private int titleOffset = TITLE_OFFSET_AUTO_CENTER;
     private float startMargin;
     private float endMargin;
     private float defaultMargin;
